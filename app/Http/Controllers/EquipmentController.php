@@ -78,7 +78,7 @@ class EquipmentController extends Controller
 
          ]);
 
-         return redirect('admin/equipment/add')->with('success','Record Inserted Successfully');
+         return redirect('/admin/equipment')->with('success','Record Inserted Successfully');
 
     }
 
@@ -156,7 +156,7 @@ class EquipmentController extends Controller
             $equipment-> days_inspection_date=$request->days_inspection_date;
         $equipment->save();
 
-      return redirect('admin/equipment/show');
+      return redirect('/admin/equipment/show');
 
     }
 

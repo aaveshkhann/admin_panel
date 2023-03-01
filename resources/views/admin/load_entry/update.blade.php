@@ -132,6 +132,7 @@
 														value="48">Alex</option>
 																									<option
 														value="49">Latif</option>
+                                                        <small class="error">{{$Loads->customer_id}}</small>
 																							</select>
 											<span>
 									</span>
@@ -156,9 +157,10 @@
 										</div>
 										<div class="form-group">
 											<label for="exampleInputPassword1">Load Type</label>
-											<select name="load_type" value="{{$Loads->load_type}}" class="form-control select2">
+											<select name="load_type"class="form-control select2">
 												<option value="TL">TL</option>
 												<option value="LTL">LTL</option>
+                                                <small class="error">{{$Loads->load_type}}</small>
 											</select>
 											<span>
 									</span>
@@ -256,6 +258,7 @@
 														value="33">Phema Chakma</option>
 																									<option
 														value="34">Ali Mukhammadiev</option>
+                                                        <small class="error">{{$Loads->dispatch}}</small>
 																							</select>
 											<span>
 									</span>
@@ -320,6 +323,7 @@
 														value="7">Md Mahmud</option>
 																									<option
 														value="8">معتز بريب</option>
+                                                        <small class="error">{{$Loads->driver_id}}</small>
 																							</select>
 											<span>
 									</span>

@@ -17,7 +17,7 @@
 
 				<div class="row-2">
 					<div class="col-md-1"></div>
-					<form role="form" action="{{route('report.driver')}}" method="post"
+					<form role="form" action="{{route('report.drive')}}" method="post"
 						  target="_blank"
 						  enctype="multipart/form-data">
                           @csrf

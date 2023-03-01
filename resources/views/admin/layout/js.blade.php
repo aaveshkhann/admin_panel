@@ -35,6 +35,8 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) --> --}}
 {{-- <script src="{{asset('dist/js/pages/dashboard.js')}}"></script> --}}
 
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 {{-- tablebuttons --}}
 <script src="//cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
 <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>

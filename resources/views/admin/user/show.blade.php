@@ -67,9 +67,9 @@
         <td>{{$Add_User->username}}</td>
 
         <td>
-            <input type="checkbox" name="status" {{ $Add_User->status == 1 ? 'checked' : '' }} data-toggle="toggle" data-on="Active" data-off="Inactive">
 
-
+            <input data-id="{{$Add_User->id}}" id="toggle-class" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger"
+            data-toggle="toggle" data-on="Active" data-off="InActive" {{ $Add_User->status ? 'checked' : '' }}>
         </td>
         <td>
 
@@ -104,6 +104,29 @@
           ]
       } );
   } );
+  </script>
+
+
+
+
+<script>
+    $(function() {
+      $('.toggle-class').change(function() {
+          var status = $(this).prop('checked') == true ? 1 : 0;
+          var user_id = $(this).data('id');
+
+
+          $.ajax({
+              type: "GET",
+              dataType: "json",
+              url: '{{route('changeStatus')}}',
+              data: {'status': status, 'user_id': user_id},
+              success: function(data){
+                console.log(data.success)
+              }
+          });
+      })
+    })
   </script>
 
 @endsection

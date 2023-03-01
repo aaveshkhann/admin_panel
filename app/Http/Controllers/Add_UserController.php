@@ -22,10 +22,14 @@ class Add_UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+  public function changeStatus(Request $request)
+        {
+            $user = Add_User::find($request->user_id);
+            $user->status = $request->status;
+            $user->save();
+
+            return response()->json(['success'=>'Status change successfully.']);
+        }
 
     /**
      * Store a newly created resource in storage.

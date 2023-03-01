@@ -128,11 +128,13 @@ Route::prefix('admin')->group(function () {
    Route::get('add_user/delete/{id}',[Add_UserController::class,'destroy'])->name('delete.adduser');
    Route::get('add_user/edit/{id}',[Add_UserController::class,'edit'])->name('adduser.edit');
    Route::put('add_user/update/{id}',[Add_UserController::class,'update'])->name('adduser.update');
+   Route::get('/changeStatus',[Add_UserController::class,'changeStatus'])->name('changeStatus');
 
 
 
 
    Route::get('/report/driver',[ReportController::class,'Driver'])->name('report.driver');
+   Route::POST('/report/driver',[ReportController::class,'Driver_data'])->name('report.drive');
 
 
 
